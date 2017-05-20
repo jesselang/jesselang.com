@@ -1,3 +1,28 @@
-baseURL = "https://jesselang.com/"
-languageCode = "en-us"
-title = "jesselang.com"
+baseurl = "https://jesselang.com/"
+languageCode = "en-US"
+title = "Jesse Lang"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+theme = "hugo-sustain"
+
+[permalinks]
+  post = "/:year/:month/:slug"
+
+[params]
+  avatar = "profile.jpg"
+  author = "Jesse Lang"
+  description = ""
+
+  # Custom assets can be linked with their paths relative to static/
+  custom_css = []
+  custom_js  = []
+
+[params.social]
+  Github        = "jesselang"
+  Email         = ""
+  Twitter       = "jesselang"
+  LinkedIn      = "jesselang"
+  Stackoverflow = ""
+
