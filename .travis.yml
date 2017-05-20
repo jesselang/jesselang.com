@@ -1,0 +1,8 @@
+language: go
+go:
+  - 1.8
+sudo: required
+install:
+  - sudo pip install Pygments
+  - go get github.com/spf13/hugo
+script: hugo
