@@ -1,6 +1,6 @@
 language: go
 go:
-  - 1.8
+  - 1.8.1
 sudo: required
 install:
   - sudo pip install Pygments
