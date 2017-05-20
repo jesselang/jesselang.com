@@ -7,6 +7,9 @@ install:
   - go get github.com/spf13/hugo
 script: hugo
 deploy:
+  skip_cleanup: true
   provider: firebase
   token:
     secure: UjUKXIJFAPGc3Zxb4bwAYqEg5T9paCHdPNUvcX0P3YpdQp19m7pOi7FS47hYiwSELSjGzi8kmmKVuXkYCh8RV0ZDPgmexVv6QzHrUNDcf+/YdpgwG+FK4nf1LKAEiXUIxs3nnhNbdFJFKbkGXb3pT/qLb8fZiMeJj019/YWLmQHHr1mReu8EZ+/W3BehEgELar/Kl8h3rAfJCIeURMSnQpt7H3/nLARjKKjWGLmRU3FGwcMB5Zm4mR8PBS3/2FtgYua96AdFDdta6yLUrBccpftOUGrwapMj/0nBM5N/nkns4F4XLYpMVY9kZcwwxxlMHBIcj+EhRrCtZ0QvGruqoaXz9OAXwbuthzbpHAtdySNKOlqUGiqIvZ8l/gy3ezx2MgN6zW1haQtVxsnwWj2GKw9ZbuBV61zaTsczcfSK5T3GbFIZr1FKQKk+IYKtn5e6z70qzDJ5vPffC9by47x79uBbO6/HqVDj3++5pfoRDrF7QjanU4b6+FJlzLGW7omB7z/L4bJzt3/K7WTDu3dsLjLb1FmRLLkYU0QWVLDEifcVZ59n+cEURUaeHV/q+0VjuP+hmuZPEutJbEqye3ZTkfP5JcmC9KqYWBD/4GlZYVDJGmOl41qyFNaB0Ne63RL14PiYq/ia2Dk5Ozm4VGDMlJirv7fPo7PglmnYeB4DEsc=
+  on:
+    branch: master
