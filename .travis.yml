@@ -6,7 +6,7 @@ install:
   - npm install -g firebase-tools
   - sudo pip install Pygments
   - go get github.com/spf13/hugo
-  script: hugo && firebase deploy --token ${FIREBASE_TOKEN}
+script: hugo && firebase deploy --token ${FIREBASE_TOKEN}
 env:
   - secure: "baHth4XYJUVi+wJg1ENNZ+YDrqFdyyRgCKIXU4jOEXhTaxy7AOdqqOJ1D/tNzoL3iHO4HNQ8Z065T3oPkLtx63Kyy1n/sqWoB0tUpn1h8xTcPzYF2u1F6TfqjmTmTqnqbX8A6uOYi82hDXvUlB3bofpT0zXsAlECxhKqVy285pUQiDKS6rzSvhXoaZ5xBC6LpR+6qcxNiq63udzV4oJIzbhbjKSq/Qp4fhGnilfgFf59CcTjpbOpuUWiQiZOJvTe6PGov/1fcp+oSK/RiJ4iZAfgB8k5GJTpoUTrNSj1Pi/ulDxBlmWq5spMegvaYju76lKVByLI4QUuUaZTrUCdD3wN+u7uH01sTQSLqEskxKghX5OeBZ3EDrtAD39UOYN+JMRRS9molYGnzCMQc2802UUMHcRU6RAqO/CGT1hSFPmmtMqJ664tVPgXHs9pi8Jk++ursJpMjbOXkR0g9+IkE0FZbIIWFuECrQ/H3oWnVZP7Lw0oYWJpSLvK1D+ZFqtNsuhaN1MDHBtpgVrHHdEKPcnKkCXyTUViE56s22ImrbVXjGYM3R8KOE/1Le1msnlpgazXpEcY5FSEmmexjl+KoW7sXeRxIixlsZ42iETjxxVoigD1dQtTxNCiAFiRxypDQJFzXun4bywS1SIwGz3i+JEIwb4wakc6c28wiyXTWIw="
 #deploy:
