@@ -3,13 +3,16 @@ go:
   - 1.8.1
 sudo: required
 install:
+  - npm install -g firebase-tools
   - sudo pip install Pygments
   - go get github.com/spf13/hugo
-script: hugo
-deploy:
-  skip_cleanup: true
-  provider: firebase
-  token:
-    secure: UjUKXIJFAPGc3Zxb4bwAYqEg5T9paCHdPNUvcX0P3YpdQp19m7pOi7FS47hYiwSELSjGzi8kmmKVuXkYCh8RV0ZDPgmexVv6QzHrUNDcf+/YdpgwG+FK4nf1LKAEiXUIxs3nnhNbdFJFKbkGXb3pT/qLb8fZiMeJj019/YWLmQHHr1mReu8EZ+/W3BehEgELar/Kl8h3rAfJCIeURMSnQpt7H3/nLARjKKjWGLmRU3FGwcMB5Zm4mR8PBS3/2FtgYua96AdFDdta6yLUrBccpftOUGrwapMj/0nBM5N/nkns4F4XLYpMVY9kZcwwxxlMHBIcj+EhRrCtZ0QvGruqoaXz9OAXwbuthzbpHAtdySNKOlqUGiqIvZ8l/gy3ezx2MgN6zW1haQtVxsnwWj2GKw9ZbuBV61zaTsczcfSK5T3GbFIZr1FKQKk+IYKtn5e6z70qzDJ5vPffC9by47x79uBbO6/HqVDj3++5pfoRDrF7QjanU4b6+FJlzLGW7omB7z/L4bJzt3/K7WTDu3dsLjLb1FmRLLkYU0QWVLDEifcVZ59n+cEURUaeHV/q+0VjuP+hmuZPEutJbEqye3ZTkfP5JcmC9KqYWBD/4GlZYVDJGmOl41qyFNaB0Ne63RL14PiYq/ia2Dk5Ozm4VGDMlJirv7fPo7PglmnYeB4DEsc=
-  on:
-    branch: master
+  script: hugo && firebase deploy --token ${FIREBASE_TOKEN}
+env:
+  - secure: "baHth4XYJUVi+wJg1ENNZ+YDrqFdyyRgCKIXU4jOEXhTaxy7AOdqqOJ1D/tNzoL3iHO4HNQ8Z065T3oPkLtx63Kyy1n/sqWoB0tUpn1h8xTcPzYF2u1F6TfqjmTmTqnqbX8A6uOYi82hDXvUlB3bofpT0zXsAlECxhKqVy285pUQiDKS6rzSvhXoaZ5xBC6LpR+6qcxNiq63udzV4oJIzbhbjKSq/Qp4fhGnilfgFf59CcTjpbOpuUWiQiZOJvTe6PGov/1fcp+oSK/RiJ4iZAfgB8k5GJTpoUTrNSj1Pi/ulDxBlmWq5spMegvaYju76lKVByLI4QUuUaZTrUCdD3wN+u7uH01sTQSLqEskxKghX5OeBZ3EDrtAD39UOYN+JMRRS9molYGnzCMQc2802UUMHcRU6RAqO/CGT1hSFPmmtMqJ664tVPgXHs9pi8Jk++ursJpMjbOXkR0g9+IkE0FZbIIWFuECrQ/H3oWnVZP7Lw0oYWJpSLvK1D+ZFqtNsuhaN1MDHBtpgVrHHdEKPcnKkCXyTUViE56s22ImrbVXjGYM3R8KOE/1Le1msnlpgazXpEcY5FSEmmexjl+KoW7sXeRxIixlsZ42iETjxxVoigD1dQtTxNCiAFiRxypDQJFzXun4bywS1SIwGz3i+JEIwb4wakc6c28wiyXTWIw="
+#deploy:
+#  skip_cleanup: true
+#  provider: firebase
+#  token:
+#    secure: UjUKXIJFAPGc3Zxb4bwAYqEg5T9paCHdPNUvcX0P3YpdQp19m7pOi7FS47hYiwSELSjGzi8kmmKVuXkYCh8RV0ZDPgmexVv6QzHrUNDcf+/YdpgwG+FK4nf1LKAEiXUIxs3nnhNbdFJFKbkGXb3pT/qLb8fZiMeJj019/YWLmQHHr1mReu8EZ+/W3BehEgELar/Kl8h3rAfJCIeURMSnQpt7H3/nLARjKKjWGLmRU3FGwcMB5Zm4mR8PBS3/2FtgYua96AdFDdta6yLUrBccpftOUGrwapMj/0nBM5N/nkns4F4XLYpMVY9kZcwwxxlMHBIcj+EhRrCtZ0QvGruqoaXz9OAXwbuthzbpHAtdySNKOlqUGiqIvZ8l/gy3ezx2MgN6zW1haQtVxsnwWj2GKw9ZbuBV61zaTsczcfSK5T3GbFIZr1FKQKk+IYKtn5e6z70qzDJ5vPffC9by47x79uBbO6/HqVDj3++5pfoRDrF7QjanU4b6+FJlzLGW7omB7z/L4bJzt3/K7WTDu3dsLjLb1FmRLLkYU0QWVLDEifcVZ59n+cEURUaeHV/q+0VjuP+hmuZPEutJbEqye3ZTkfP5JcmC9KqYWBD/4GlZYVDJGmOl41qyFNaB0Ne63RL14PiYq/ia2Dk5Ozm4VGDMlJirv7fPo7PglmnYeB4DEsc=
+#  on:
+#    branch: master
