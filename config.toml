@@ -8,7 +8,7 @@ googleAnalytics = "UA-31809303-1"
 theme = "hugo-sustain"
 
 [permalinks]
-  post = "/:year/:month/:slug"
+  blog = "/:year/:month/:slug"
 
 [params]
   avatar = "profile.jpg"
@@ -25,4 +25,11 @@ theme = "hugo-sustain"
   Twitter       = "jesselang"
   LinkedIn      = "jesselang"
   Stackoverflow = ""
+
+## Main Menu
+[[menu.main]]
+  name = "blog"
+  weight = 100
+  identifier = "blog"
+  url = "/blog/"
 
