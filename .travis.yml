@@ -1,18 +1,22 @@
 language: go
 go:
-  - 1.8.1
+- 1.8.1
 sudo: required
 install:
-  - npm install -g firebase-tools
-  - sudo pip install Pygments
-  - go get github.com/spf13/hugo
-script: hugo && firebase deploy --token ${FIREBASE_TOKEN}
-env:
-  - secure: "baHth4XYJUVi+wJg1ENNZ+YDrqFdyyRgCKIXU4jOEXhTaxy7AOdqqOJ1D/tNzoL3iHO4HNQ8Z065T3oPkLtx63Kyy1n/sqWoB0tUpn1h8xTcPzYF2u1F6TfqjmTmTqnqbX8A6uOYi82hDXvUlB3bofpT0zXsAlECxhKqVy285pUQiDKS6rzSvhXoaZ5xBC6LpR+6qcxNiq63udzV4oJIzbhbjKSq/Qp4fhGnilfgFf59CcTjpbOpuUWiQiZOJvTe6PGov/1fcp+oSK/RiJ4iZAfgB8k5GJTpoUTrNSj1Pi/ulDxBlmWq5spMegvaYju76lKVByLI4QUuUaZTrUCdD3wN+u7uH01sTQSLqEskxKghX5OeBZ3EDrtAD39UOYN+JMRRS9molYGnzCMQc2802UUMHcRU6RAqO/CGT1hSFPmmtMqJ664tVPgXHs9pi8Jk++ursJpMjbOXkR0g9+IkE0FZbIIWFuECrQ/H3oWnVZP7Lw0oYWJpSLvK1D+ZFqtNsuhaN1MDHBtpgVrHHdEKPcnKkCXyTUViE56s22ImrbVXjGYM3R8KOE/1Le1msnlpgazXpEcY5FSEmmexjl+KoW7sXeRxIixlsZ42iETjxxVoigD1dQtTxNCiAFiRxypDQJFzXun4bywS1SIwGz3i+JEIwb4wakc6c28wiyXTWIw="
-#deploy:
-#  skip_cleanup: true
-#  provider: firebase
-#  token:
-#    secure: UjUKXIJFAPGc3Zxb4bwAYqEg5T9paCHdPNUvcX0P3YpdQp19m7pOi7FS47hYiwSELSjGzi8kmmKVuXkYCh8RV0ZDPgmexVv6QzHrUNDcf+/YdpgwG+FK4nf1LKAEiXUIxs3nnhNbdFJFKbkGXb3pT/qLb8fZiMeJj019/YWLmQHHr1mReu8EZ+/W3BehEgELar/Kl8h3rAfJCIeURMSnQpt7H3/nLARjKKjWGLmRU3FGwcMB5Zm4mR8PBS3/2FtgYua96AdFDdta6yLUrBccpftOUGrwapMj/0nBM5N/nkns4F4XLYpMVY9kZcwwxxlMHBIcj+EhRrCtZ0QvGruqoaXz9OAXwbuthzbpHAtdySNKOlqUGiqIvZ8l/gy3ezx2MgN6zW1haQtVxsnwWj2GKw9ZbuBV61zaTsczcfSK5T3GbFIZr1FKQKk+IYKtn5e6z70qzDJ5vPffC9by47x79uBbO6/HqVDj3++5pfoRDrF7QjanU4b6+FJlzLGW7omB7z/L4bJzt3/K7WTDu3dsLjLb1FmRLLkYU0QWVLDEifcVZ59n+cEURUaeHV/q+0VjuP+hmuZPEutJbEqye3ZTkfP5JcmC9KqYWBD/4GlZYVDJGmOl41qyFNaB0Ne63RL14PiYq/ia2Dk5Ozm4VGDMlJirv7fPo7PglmnYeB4DEsc=
-#  on:
-#    branch: master
+- sudo pip install Pygments
+- go get github.com/spf13/hugo
+script: hugo
+deploy:
+  provider: gcs
+  access_key_id: GOOGLHOF2MYM2UUDGO2YSTN7
+  secret_access_key:
+    secure: UsgESBrJdOKXfdKGObzVECptVWpoi8qhTAa5/o9wVYXHHG7fDr7gfca43oVL0e7Bz1gprb+t1jLHqvqn93Pn9aK2MUl0iDATph6FdZJywARuUXXhUCQahvqe6ppMpd7JYRBDh6GBjKzXPi8I5RuvGj2j9kJOJP+W0S7fzbZEl4l2xZGoP0bA4H9bas3rf43wLWGDP9PZL5SeRZ+KCxsTgzTZwqf1dRf05eU/5P57uoLx1l5U/OpTuEc9fYD4SGBHUa8CtZWnIMxDWwFKgz37aRVEegAbeGhaDrExwSrjTKFlh8GwLnb8vs2N1pNY0sdaw55JMQuB9f5EUmIo3TyW/es/UdZQbg5vTOwMEWOunF7O1SAceBF8KiRz01OQaTkN3dIiGL/d/X6hbaaV+2UfmwxAQ886OvSoUNWgWBO/GtzaT1jYUZ//puPHlHsUIJ+sX+Aos3zwKpthy/i0T4eNCeL7hjUWnK0FRolWzBre3epndAx3HLiUGWgM7mMuItUHPKm7au0O/caRCP9mGzBDbs2KrS/x07KFfJA+hVNfhBrlmkxQGRZdFUTUnvGGF3SnsGu5CKOCA2t8M1yhpMKDxhZg8ok3Cv4SYKDQpoNuD7YICOCiztnY2GRPvtqFQWhX0L2pHVD1FJKS5IQtjeQ6brOCt3tcS1t76mhjAbf0L/Y=
+  bucket: jesselang.com
+  acl: public-read
+  detect_encoding: true
+  cache_control: "maxage=86400"
+  local-dir: public
+  skip_cleanup: true
+  on:
+    repo: jesselang/jesselang.com
+    branch: master
