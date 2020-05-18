@@ -3,7 +3,7 @@ categories = []
 date = "2017-06-09T09:49:07-05:00"
 description = ""
 tags = []
-title = "Natural cold/cough/sore throat remedy"
+title = "Natural cold, cough, and sore throat remedy"
 
 +++
 1. Press one fresh clove of garlic using a garlic press or a mortar and pestle. Let sit in open air 10-12 minutes.
