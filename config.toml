@@ -1,8 +1,8 @@
-baseurl = "https://jesselang.com/"
+baseurl = "https://www.jesselang.com"
 languageCode = "en-US"
 title = "Jesse Lang"
 # Enable comments by entering your Disqus shortname
-disqusShortname = "jesselang"
+#disqusShortname = "jesselang"
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = "UA-31809303-1"
 theme = "hugo-sustain"
