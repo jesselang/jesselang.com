@@ -5,7 +5,6 @@ title = "Jesse Lang"
 
 canonifyURLs = true
 enableRobotsTXT = true
-enableGitInfo = true
 
 theme = "anatole"
 summarylength = 10
