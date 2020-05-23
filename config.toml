@@ -1,8 +1,11 @@
+baseURL = "https://www.jesselang.com/"
 languageCode = "en"
 DefaultContentLanguage = "en"
 title = "Jesse Lang"
+
 canonifyURLs = true
 enableRobotsTXT = true
+enableGitInfo = true
 
 theme = "anatole"
 summarylength = 10
@@ -24,6 +27,9 @@ keywords = ""
 favicon = "favicons/"
 customCss = []
 mainSections = ["post"]
+
+# Overridden at build time
+commitHash = ""
 
 ## Math settings
 [params.math]
