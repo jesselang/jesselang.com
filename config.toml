@@ -28,7 +28,7 @@ customCss = []
 mainSections = ["post"]
 
 # Overridden at build time
-commitHash = ""
+commitHash = "[unknown]"
 
 ## Math settings
 [params.math]
