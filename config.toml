@@ -1,35 +1,59 @@
-baseurl = "https://www.jesselang.com/"
-languageCode = "en-US"
+languageCode = "en"
+DefaultContentLanguage = "en"
 title = "Jesse Lang"
-# Enable comments by entering your Disqus shortname
-#disqusShortname = "jesselang"
-# Enable Google Analytics by entering your tracking code
+theme = "anatole"
+summarylength = 10
+enableEmoji = true
+
+# Google Analytics
 googleAnalytics = "UA-31809303-1"
-theme = "hugo-sustain"
 
 [permalinks]
   blog = "/:year/:month/:slug"
 
 [params]
-  avatar = "profile.jpg"
-  author = "Jesse Lang"
-  description = ""
+title = "Hi. I'm Jesse Lang."
+author = "Jesse Lang"
+description = "Forgiven. Son, husband, father; open-source geek."
+profilePicture = "img/profile.jpg"
+keywords = ""
+favicon = "favicons/"
+customCss = []
+mainSections = ["blog"]
 
-  # Custom assets can be linked with their paths relative to static/
-  custom_css = []
-  custom_js  = []
+## Math settings
+[params.math]
+enable = false  # options: true, false. Enable math support globally, default: false. You can always enable math on per page.
+use = "katex"  # options: "katex", "mathjax". default is "katex".
 
-[params.social]
-  Github        = "jesselang"
-  Email         = ""
-  Twitter       = "jesselang"
-  LinkedIn      = "jesselang"
-  Stackoverflow = ""
+## Social links
+[[params.socialIcons]]
+icon = "fa-github"
+title = "GitHub"
+url = "https://github.com/jesselang"
 
-## Main Menu
-[[menu.main]]
-  name = "blog"
+[[params.socialIcons]]
+icon = "fa-linkedin"
+title = "LinkedIn"
+url = "https://www.linkedin.com/in/jesselang/"
+
+[[params.socialIcons]]
+icon = "fa-twitter"
+title = "Twitter"
+url = "https://twitter.com/jesselang"
+
+## Menu items
+
+[menu]
+
+  [[menu.main]]
+  name = "Home"
+  identifier = "home"
   weight = 100
+  url = "/"
+
+  [[menu.main]]
+  name = "Blog"
+  weight = 200
   identifier = "blog"
   url = "/blog/"
-

@@ -1,0 +1,7 @@
+[context.production.environment]
+  HUGO_VERSION = "0.70.0"
+  HUGO_BASEURL = "https://www.jesselang.com/"
+
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.70.0"
+  HUGO_BASEURL = "/"
