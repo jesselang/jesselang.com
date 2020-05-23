@@ -1,6 +1,9 @@
 languageCode = "en"
 DefaultContentLanguage = "en"
 title = "Jesse Lang"
+canonifyURLs = true
+enableRobotsTXT = true
+
 theme = "anatole"
 summarylength = 10
 enableEmoji = true
@@ -9,7 +12,8 @@ enableEmoji = true
 googleAnalytics = "UA-31809303-1"
 
 [permalinks]
-  blog = "/:year/:month/:slug"
+  post = "/:year/:month/:slug"
+  page = "/:slug"
 
 [params]
 title = "Hi. I'm Jesse Lang."
@@ -19,7 +23,7 @@ profilePicture = "img/profile.jpg"
 keywords = ""
 favicon = "favicons/"
 customCss = []
-mainSections = ["blog"]
+mainSections = ["post"]
 
 ## Math settings
 [params.math]
@@ -53,7 +57,7 @@ url = "https://twitter.com/jesselang"
   url = "/"
 
   [[menu.main]]
-  name = "Blog"
+  name = "Posts"
   weight = 200
-  identifier = "blog"
-  url = "/blog/"
+  identifier = "posts"
+  url = "/post/"
