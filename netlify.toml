@@ -1,3 +1,7 @@
+[build]
+  publish = "public"
+  command = "HUGO_PARAMS_commitHash=$COMMIT_REF hugo"
+
 [context.production.environment]
   HUGO_VERSION = "0.70.0"
   HUGO_BASEURL = "https://www.jesselang.com/"
