@@ -8,9 +8,12 @@
         {{ if eq .Type "post"}}
         <div class="info">
           <i class="fa fa-sun-o"></i><span class="date dt-published"
-            datetime="{{ dateFormat "2006-01-02 15:04:05 MST" .Date.UTC }}"
+            datetime="{{ dateFormat "2006-01-02T15:04:05Z" .Date.UTC }}"
             >{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
           <i class="fa fa-clock-o"></i><span class="reading-time">{{ .ReadingTime }}-minute read</span>
+          <!-- i class="fa fa-user-circle-o"></i><a rel="author" class="p-author h-card"
+            href="{{ .Site.BaseURL }}">{{ .Site.Params.Author }}</a -->
+          <i class="fa fa-link"></i><a class="u-uid" href="{{ .Permalink }}">Permalink</a>
         </div>
         {{ end }}
         </div>
